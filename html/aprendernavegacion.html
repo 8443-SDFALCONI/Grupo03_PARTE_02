@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>JS HTML DOM BÁSICO</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <title>Grupo 03</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bootstrap 4 Template For Software Startups">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">
+    <link rel="shortcut icon" href="../favicon.ico">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome JS-->
+    <script defer src="../assets/fontawesome/js/all.min.js"></script>
+
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/dark.min.css">
+    <link rel="stylesheet" href="../assets/plugins/simplelightbox/simple-lightbox.min.css">
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="../assets/css/theme.css">
+    <link id="theme-style" rel="stylesheet" href="../css/efectos.css">
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+
+<body class="docs-page">
+    <header class="header fixed-top">
+        <div class="branding docs-branding">
+            <div class="container-fluid position-relative py-2">
+                <div class="docs-logo-wrapper">
+                    <button id="docs-sidebar-toggler" class="docs-sidebar-toggler docs-sidebar-visible me-2 d-xl-none"
+                        type="button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="site-logo"><a class="navbar-brand" href="index.html"><img class="logo-icon me-2"
+                                src="../assets/images/coderdocs-logo.svg" alt="logo"><span class="logo-text">Grupo<span
+                                    class="text-alt">03</span></span></a></div>
+                </div>
+                <!--//docs-logo-wrapper-->
+                <div class="docs-top-utilities d-flex justify-content-end align-items-center">
+
+
+                    <ul class="social-list list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex">
+                        <li class="list-inline-item"><a href="https://www.facebook.com/"><i
+                                    class="fab fa-facebook-f fa-fw"></i></a></li>
+                        <li class="list-inline-item"><a href="https://www.instagram.com/"><i
+                                    class="fab fa-instagram fa-fw"></i></a></li>
+                    </ul>
+                    <!--//social-list-->
+
+                </div>
+                <!--//docs-top-utilities-->
+            </div>
+            <!--//container-->
+        </div>
+        <!--//branding-->
+    </header>
+    <!--//header-->
+
+    <div class="docs-wrapper">
+        <div id="docs-sidebar" class="docs-sidebar">
+            <div class="top-search-box d-lg-none p-3">
+                <form class="search-form">
+                    <input type="text" placeholder="Search the docs..." name="search" class="form-control search-input">
+                    <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            <nav id="docs-nav" class="docs-nav navbar">
+                <ul class="section-items list-unstyled nav flex-column pb-3">
+                    <li class="nav-item section-title"><a class="nav-link scrollto active" href="#section-1"><span
+                                class="theme-icon-holder me-2"><i class="fas fa-map-signs"></i></span>Navegación DOM</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#item-1-4">Regresar</a></li>
+                </ul>
+            </nav>
+            <!--//docs-nav-->
+        </div>
+        <!--//docs-sidebar-->
+        <div class="docs-content">
+            <div class="container">
+                <article class="docs-article" id="section-1">
+                    <header class="docs-header">
+                        <h1 class="docs-heading">Navegación DOM <span class="docs-time">Última Actualización
+                                15/12/2022</span></h1>
+                        <h2 class="section-heading">Navegación DOM</h2>
+                        <p>Los nodos en el árbol DOM siguen la estructura jerárquica entre sí.</p>
+                        <p>El nodo que está en la parte superior del árbol DOM se conoce como el nodo raíz.</p>
+                        <p>Cada nodo tiene un nodo principal excepto el nodo raíz</p>
+                        <p>Un padre puede tener cualquier número de hijos.</p>
+                        <p>Los nodos cuyos padres son iguales se llaman vecinos o hermanos.</p>
+                        <p>Existen tres formas posibles de moverse a través de un árbol:</p>
+                        <p>Hacia abajo en el árbol</p>
+                        <p>Hacia arriba en el árbol</p>
+                        <p>
+                        <p>Hacia un lado en el árbol</p>
+                        </p>
+                        <p>Sintaxis: Al usar la propiedad del nodo firstChild en un nodo, obtendrá el primer nodo del
+                            elemento.<br><code>
+        const primero = element.firstChild;</code>
+                        <p>firstElementChild devuelve el primer hijo del padre que es un elemento.<br>
+                            <code>var primerelemento = element.firstElementChild.nodeName;
+                                    </p></code>
+                        <p>lastElementChild devuelve el último hijo del padre que es un elemento.<br>
+                            <code>var lastElement = element.lastElementChild.nodeName;
+                                    </p></code>
+                        <p>Utilice la propiedad lastChild para seleccionar el último elemento secundario del elemento
+                            principal.<br>
+                            <code>var ultimo = element.lastChild.nodeName;
+                                    </p></code>
+                        <p>La propiedad child del elemento devuelve HTMLCollection que contiene todos los elementos
+                            secundarios del elemento especificado.<br>
+                            <code>
+        for (let i = 0; i &lt; element.childNodes.length; i++) {
+            console.log(element.childNodes[i]);
+          }
+        </code>
+                        </p>
+                        <br>
+
+                        <h4 class="heading" style="padding-top:1%">Ejemplo</h4>
+                        <h4 class="heading">JavaScript</h4>
+                        <div class="docs-code-block">
+                            <pre class="shadow-lg rounded"><code class="javascript hljs">const element = document.getElementById("nodopadre");
+const primer = element.firstChild;
+console.log(primer);
+console.log(primer.nodeName);
+    </code></pre>
+                        </div>
+                        <!--//docs-code-block-->
+                        <h4 class="heading">HTML</h4>
+                        <div class="docs-code-block">
+                            <pre class="shadow-lg rounded"><code class="javascript hljs">&lt;div id="nodopadre">
+    &lt;h1>Párrafo 1&lt;/h1>
+    &lt;p>Párrafo 2&lt;/p>
+&lt;/div>
+</code></pre>
+                        </div>
+                        <!--//docs-code-block-->
+
+                        <h3>Demo</h3>
+                        <div id="nodopadre">
+                            <h4>Párrafo 1</h4>
+                            <p>Abre la consola para poder ver el resultado</p>
+                        </div>
+
+                        <h4 class="heading" style="padding-top:1%">Ejemplo 2</h4>
+                        <p>En este ejemplo se obtendrá el valor de un botón siendo un elemento hijo de una sección
+                            section-1</p>
+                        <h4 class="heading">JavaScript</h4>
+                        <div class="docs-code-block">
+                            <pre class="shadow-lg rounded"><code class="javascript hljs">function funcion2() {
+    var h = document.getElementById("section-1");
+    var g = h.getElementsByTagName("BUTTON")[0];
+    var f = g.childNodes[0].nodeValue;
+    document.getElementById("texto3").innerHTML = f;
+}
+    </code></pre>
+                        </div>
+                        <!--//docs-code-block-->
+                        <h4 class="heading">HTML</h4>
+                        <div class="docs-code-block">
+                            <pre class="shadow-lg rounded"><code class="javascript hljs">&lt;section id="section-1">
+&lt;button onclick="funcion2()">Ejecutar&lt;/button>
+&lt;p id="texto3">&lt;/p>
+&lt;/section>
+</code></pre>
+                        </div>
+                        <!--//docs-code-block-->
+
+                        <h3>Demo</h3>
+                        <button onclick="funcion2()">Ejecutar</button>
+                        <p id="texto3"></p>
+
+                        </section>
+
+                        <!--//section-->
+
+                        <footer class="footer">
+                            <div class="container text-center py-5">
+                                <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+                                <small class="copyright">Template diseñado por <a class="theme-link"
+                                        href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying
+                                        Riley.</a></small>
+                                <ul class="social-list list-unstyled pt-4 mb-0">
+                                    <li class="list-inline-item"><a href="https://www.facebook.com/"><i
+                                                class="fab fa-facebook-f fa-fw"></i></a></li>
+                                    <li class="list-inline-item"><a href="https://www.instagram.com/"><i
+                                                class="fab fa-instagram fa-fw"></i></a></li>
+                                </ul>
+                                <!--//social-list-->
+                            </div>
+                        </footer>
+            </div>
+        </div>
+    </div>
+
+    <!--//docs-wrapper-->
+
+    <!-- Javascript -->
+    <script src="../assets/plugins/popper.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Page Specific JS -->
+    <script src="../assets/plugins/smoothscroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+    <script src="../assets/js/highlight-custom.js"></script>
+    <script src="../assets/plugins/simplelightbox/simple-lightbox.min.js"></script>
+    <script src="../assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script>
+    <script src="../assets/js/docs.js"></script>
+    <script src="../assets/plugins/codigo2.js"></script>
+
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+    <!-- SCROOLL REVEAL SCRIPT -->
+    <script>
+        window.sr = ScrollReveal();
+
+        sr.reveal('#item-1-1', {
+            duration: 2000,
+            origin: 'bottom',
+            distance: '300px'
+        });
+
+        sr.reveal('#item-1-2', {
+            duration: 2000,
+            origin: 'bottom',
+            distance: '300px'
+        });
+        sr.reveal('#item-1-3', {
+            duration: 2000,
+            origin: 'bottom',
+            distance: '300px'
+        });
+
+        sr.reveal('#item-1-4', {
+            duration: 2000,
+            origin: 'bottom',
+            distance: '300px'
+        });
+        sr.reveal('#item-1-5', {
+            duration: 2000,
+            origin: 'bottom',
+            distance: '300px'
+        });
+
+        sr.reveal('#item-1-6', {
+            duration: 2000,
+            origin: 'bottom',
+            distance: '300px'
+        });
+        sr.reveal('#item-1-7', {
+            duration: 2000,
+            origin: 'bottom',
+            distance: '300px'
+        });
+
+        sr.reveal('.docs-header', {
+            duration: 2000,
+            origin: 'top',
+            distance: '300px'
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

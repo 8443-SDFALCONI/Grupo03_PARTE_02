@@ -1,0 +1,54 @@
+
+
+    #contenedor1 {
+      width: 550px;
+      height: 350px;
+      border: 5px black solid;
+      overflow: hidden;
+      background-color: #FFF9FF;
+      display: flex;
+      align-items: center;
+    }
+
+    #circulo1 {
+      width: 200px;
+      height: 200px;
+      background-color: #28b76b;
+    }
+
+    #mover1 {
+      background-color: #28b76b;
+      margin-top: 20px;
+      font-size: 16px;
+      font-weight: bold;
+      border: 5px solid #333;
+      outline: none;
+      color: rgb(230,230,230);
+    }
+    #mover1:hover {
+      background-color: coral;
+    }
+    #mover1:active {
+      background-color: yellowgreen;
+    }
+
+
+    #parar1 {
+      background-color: #28b76b;
+      margin-top: 20px;
+      font-size: 16px;
+      font-weight: bold;
+      border: 5px solid #333;
+      outline: none;
+      color: rgb(230,230,230);
+    }
+    #parar1:hover {
+      background-color: coral;
+    }
+    #parar1:active {
+      background-color: yellowgreen;
+    }
+
+    div.modal div.modal-backdrop {
+      z-index: 0;
+  }

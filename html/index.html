@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>JS HTML DOM BÁSICO</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <title>Grupo 03</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bootstrap 4 Template For Software Startups">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">
+    <link rel="shortcut icon" href="../favicon.ico">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome JS-->
+    <script defer src="../assets/fontawesome/js/all.min.js"></script>
+
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/dark.min.css">
+    <link rel="stylesheet" href="../assets/plugins/simplelightbox/simple-lightbox.min.css">
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="../assets/css/theme.css">
+    <link id="theme-style" rel="stylesheet" href="../css/efectos.css">
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+
+<body class="docs-page">
+    <header class="header fixed-top">
+        <div class="branding docs-branding">
+            <div class="container-fluid position-relative py-2">
+                <div class="docs-logo-wrapper">
+                    <button id="docs-sidebar-toggler" class="docs-sidebar-toggler docs-sidebar-visible me-2 d-xl-none"
+                        type="button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="site-logo"><a class="navbar-brand" href="index.html"><img class="logo-icon me-2"
+                                src="../assets/images/coderdocs-logo.svg" alt="logo"><span class="logo-text">Grupo<span
+                                    class="text-alt">03</span></span></a></div>
+                </div>
+                <!--//docs-logo-wrapper-->
+                <div class="docs-top-utilities d-flex justify-content-end align-items-center">
+
+
+                    <ul class="social-list list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex">
+                        <li class="list-inline-item"><a href="https://www.facebook.com/"><i
+                                    class="fab fa-facebook-f fa-fw"></i></a></li>
+                        <li class="list-inline-item"><a href="https://www.instagram.com/"><i
+                                    class="fab fa-instagram fa-fw"></i></a></li>
+                    </ul>
+                    <!--//social-list-->
+
+                </div>
+                <!--//docs-top-utilities-->
+            </div>
+            <!--//container-->
+        </div>
+        <!--//branding-->
+    </header>
+    <!--//header-->
+
+    <div class="docs-wrapper">
+        <div id="docs-sidebar" class="docs-sidebar">
+            <div class="top-search-box d-lg-none p-3">
+                <form class="search-form">
+                    <input type="text" placeholder="Search the docs..." name="search" class="form-control search-input">
+                    <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            <nav id="docs-nav" class="docs-nav navbar">
+                <ul class="section-items list-unstyled nav flex-column pb-3">
+                    <li class="nav-item section-title"><a class="nav-link scrollto active" href="#section-1"><span
+                                class="theme-icon-holder me-2"><i class="fas fa-map-signs"></i></span>DOM</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-1">DOM Animaciones</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-2">DOM Eventos</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-3">DOM Event Listener</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-4">Navegación DOM</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-5">Nodos DOM</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-6">Colecciones DOM</a>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-7">Lista de Nodos DOM</a></li>
+                </ul>
+
+            </nav>
+            <!--//docs-nav-->
+        </div>
+        <!--//docs-sidebar-->
+        <div class="docs-content">
+            <div class="container">
+                <article class="docs-article" id="section-1">
+                    <header class="docs-header">
+                        <h1 class="docs-heading">DOM Intro <span class="docs-time">Última Actualización
+                                15/12/2022</span></h1>
+
+                        <section class="docs-intro">
+                            <p>HTML DOM (Document Object Model) hace referencia al modelo de objetos del documento en el
+                                momento en que se carga una página web. Este modelo es construido a partir de un árbol
+                                de objetos, y cada objeto permite modelar tanto la ventana propia del navegador, la
+                                página web, el historial de navegación, así como cualquier elemento HTML. El DOM permite
+                                ser accedido a través de JavaScript, para poder crear, modificar, o eliminar elementos
+                                utilizando código de programación.
+                            </p>
+                            <br>
+                            <p>DOM o Document Object Model es un conjunto de utilidades específicamente diseñadas para
+                                manipular documentos XML. Por extensión, DOM también se puede utilizar para manipular
+                                documentos XHTML y HTML. Técnicamente, DOM es una API de funciones que se pueden
+                                utilizar para manipular las páginas XHTML de forma rápida y eficiente.</p>
+
+                            <br>
+                            <p>Antes de poder utilizar sus funciones, DOM transforma internamente el archivo XML
+                                original en una estructura más fácil de manejar formada por una jerarquía de nodos. De
+                                esta forma, DOM transforma el código XML en una serie de nodos interconectados en forma
+                                de árbol. El árbol generado no sólo representa los contenidos del archivo original
+                                (mediante los nodos del árbol) sino que también representa sus relaciones (mediante las
+                                ramas del árbol que conectan los nodos).</p>
+                            <br>
+                            <p>Aunque en ocasiones DOM se asocia con la programación web y con JavaScript, la API de DOM
+                                es independiente de cualquier lenguaje de programación. De hecho, DOM está disponible en
+                                la mayoría de lenguajes de programación comúnmente empleados. </p>
+
+                            <img src="../images/dom-1.jpg" class="img-fluid img-thumbnail">
+                            <p>Al estar "amparado" por un lenguaje de programación, todas estas tareas se pueden
+                                automatizar, incluso indicando que se realicen cuando el usuario haga acciones
+                                determinadas, como por ejemplo: pulsar un botón, mover el ratón, hacer click en una
+                                parte del documento, escribir un texto, etc...</p>
+
+                            <p>Pero, ¿quién define la forma en la que DOM debe funcionar en los navegadores y motores
+                                web? Se trata del W3C o World Wide Web Consortium, que además maneja otros sistemas. El
+                                W3C es una entidad internacional, creada en 1994 por Tim Berners-Lee, el padre de la
+                                Internet; que desarrolla padrones abiertos, asegurando el crecimiento de la web. Dentro
+                                de la entidad existe un grupo llamado Web Platform Working Group, responsable por DOM.
+                                La W3C es responsable por diversos otros padrones, protocolos y lenguajes, como:
+                                CSS;
+                                HTML;
+                                XML;
+                                SVJ.
+
+                        </section>
+                    </header>
+
+                    <section class="docs-section" id="item-1-1">
+                        <h2 class="section-heading">DOM Animaciones</h2>
+                        <p>JavaScript permite modificar y agregar animaciones de CSS a través de código que permite
+                            agregar dinamismo a un objeto HTML que una vez que ha sido renderizado al visualizar el
+                            sitio web se mantiene estático. Es posible volver a dibujar nuevamente el elemento
+                            utilizando JavaScript, sin embargo, se debe tener en cuenta que consume más recursos volver
+                            a dibujar el elemento en cada frame, y algunas animaciones más complejas pueden requerir una
+                            mayor capacidad de procesamiento del computador en el que se visualiza el elemento.</p>
+
+                        </p>
+
+
+                        <h3>Demo</h3>
+                        <div id="contenedor1">
+                            <div id="circulo1"></div>
+                        </div>
+
+                        <input id="mover1" type="button" value="mover" onclick="movimiento1()"></input>
+                        <input id="parar1" type="button" value="parar"></input>
+                        <br><br>
+                        <p>Para más información da click en el siguiente botón.</p>
+                        <a type="button" class="btn btn-primary" href="aprender.html">
+                            Vamos a aprender
+                        </a>
+
+                    </section>
+
+                    <section class="docs-section" id="item-1-2">
+                        <h2 class="section-heading">DOM Eventos</h2>
+                        <p>La interacción de JavaScript con HTML se maneja a través de eventos que ocurren cuando el
+                            usuario o el navegador manipula una página.
+
+                            Cuando se carga la página, se llama un evento. Cuando el usuario hace clic en un botón, ese
+                            clic también es un evento. Otros ejemplos incluyen eventos como presionar cualquier tecla,
+                            cerrar una ventana, cambiar el tamaño de una ventana, etc.
+
+                            Los desarrolladores pueden usar estos eventos para ejecutar respuestas codificadas en
+                            JavaScript, lo que hace que los botones cierren ventanas, se muestren mensajes a los
+                            usuarios, se validen datos y prácticamente cualquier otro tipo de respuesta imaginable.</p>
+
+                        <h4 class="heading" style="padding-top:1%">Ejemplo</h4>
+                        <h4 class="heading">JavaScript</h4>
+                        <div class="docs-code-block">
+                            <pre class="shadow-lg rounded"><code class="javascript hljs">function saludo1() {
+    alert("Grupo 03")
+}
+</code></pre>
+                        </div>
+                        <!--//docs-code-block-->
+                        <h4 class="heading">HTML</h4>
+                        <div class="docs-code-block">
+                            <pre class="shadow-lg rounded"><code class="javascript hljs">&lt;form>
+    &lt;input type = "button" onclick = "saludo1()" value = "Dar click aquí" />
+&lt;/form>  
+</code></pre>
+                        </div>
+                        <!--//docs-code-block-->
+
+                        <h3>Demo</h3>
+                        <form>
+                            <input type="button" onclick="saludo1()" value="Dar click aquí" />
+                        </form>
+                        <p></p>
+                        <p>Para consultar más información da click en el siguiente botón.</p>
+                        <a type="button" class="btn btn-primary" href="aprendereventos.html">
+                            Vamos a aprender
+                        </a>
+
+                    </section>
+                    <!--//section-->
+
+                    <section class="docs-section" id="item-1-3">
+                        <h2 class="section-heading">DOM Event Listener</h2>
+
+                        <p>Con el método .addEventListener() permite añadir una escucha del evento indicado (primer
+                            parámetro), y en el caso de que ocurra, se ejecutará la función asociada indicada (segundo
+                            parámetro). De forma opcional, se le puede pasar un tercer parámetro con ciertas opciones,
+                            que veremos más adelante:
+                        </p>
+                        <p>Con .addEventListener() se pueden añadir fácilmente varias funcionalidades.</p>
+                        <p>Con .removeEventListener() se puede eliminar una funcionalidad previamente añadida.</p>
+                        <p>Con .addEventListener() se pueden indicar ciertos comportamientos especiales.</p>
+
+                        <h4 class="heading" style="padding-top:1%">Ejemplo</h4>
+                        <h4 class="heading">JavaScript</h4>
+                        <div class="docs-code-block">
+                            <pre class="shadow-lg rounded"><code class="javascript hljs">document.getElementById("botonlistener").addEventListener("click", function(){
+    document.getElementById("texto1").innerText = "El texto aparece con EventListener";
+});
+</code></pre>
+                        </div>
+                        <!--//docs-code-block-->
+                        <h4 class="heading">HTML</h4>
+                        <div class="docs-code-block">
+                            <pre class="shadow-lg rounded"><code class="javascript hljs">&lt;button id="botonlistener">Click here&lt;/button>
+&lt;h1 id="texto1">&lt;/h1>
+</code></pre>
+                        </div>
+                        <!--//docs-code-block-->
+
+                        <h3>Demo</h3>
+                        <button id="botonlistener">Click here</button>
+                        <h1 id="texto1"></h1>
+
+                        <p></p>
+                        <p>Para consultar más información da click en el siguiente botón.</p>
+                        <a type="button" class="btn btn-primary" href="aprendereventlistener.html">
+                            Vamos a aprender
+                        </a>
+
+                    </section>
+                    <!--//section-->
+
+                    <section class="docs-section" id="item-1-4">
+                        <h2 class="section-heading">Navegación DOM</h2>
+                        <p>Los nodos en el árbol DOM siguen la estructura jerárquica entre sí.</p>
+                        <p>El nodo que está en la parte superior del árbol DOM se conoce como el nodo raíz.</p>
+                        <p>Cada nodo tiene un nodo principal excepto el nodo raíz</p>
+                        <p>Un padre puede tener cualquier número de hijos.</p>
+                        <p>Los nodos cuyos padres son iguales se llaman vecinos o hermanos.</p>
+                        <p>Existen tres formas posibles de moverse a través de un árbol:</p>
+                        <p>Hacia abajo en el árbol</p>
+                        <p>Hacia arriba en el árbol</p>
+                        <p>
+                        <p>Hacia un lado en el árbol</p>
+                        </p>
+                        <p>Sintaxis: Al usar la propiedad del nodo firstChild en un nodo, obtendrá el primer nodo del
+                            elemento.<br><code>
+const primero = element.firstChild;</code>
+                        <p>firstElementChild devuelve el primer hijo del padre que es un elemento.<br>
+                            <code>var primerelemento = element.firstElementChild.nodeName;
+                            </p></code>
+                        <p>lastElementChild devuelve el último hijo del padre que es un elemento.<br>
+                            <code>var lastElement = element.lastElementChild.nodeName;
+                            </p></code>
+                        <p>Utilice la propiedad lastChild para seleccionar el último elemento secundario del elemento
+                            principal.<br>
+                            <code>var ultimo = element.lastChild.nodeName;
+                            </p></code>
+                        <p>La propiedad child del elemento devuelve HTMLCollection que contiene todos los elementos
+                            secundarios del elemento especificado.<br>
+                            <code>
+for (let i = 0; i &lt; element.childNodes.length; i++) {
+    console.log(element.childNodes[i]);
+  }
+</code>
+                        </p>
+                        <br>
+                        <p>Para más información da click en el siguiente botón.</p>
+                        <a type="button" class="btn btn-primary" href="aprendernavegacion.html">
+                            Vamos a aprender
+                        </a>
+                    </section>
+                    <!--//section-->
+                    <section class="docs-section" id="item-1-5">
+                        <h2 class="section-heading">Nodos DOM</h2>
+                        <p>Los nodos DOM proporcionan varias propiedades y métodos que permiten navegar o atravesar la
+                            estructura de árbol del DOM y realizar cambios muy fácilmente.
+                        </p>
+                        <p>
+                            Puede usar las propiedades firstChild y lastChild del nodo DOM para acceder al primer y
+                            último nodo secundario directo de un nodo, respectivamente. Si el nodo no tiene ningún
+                            elemento secundario, devuelve nulo.
+                        </p>
+                        <p>
+                            El DOM nos permite hacer cualquier cosa con sus elementos y contenidos, pero lo primero que
+                            tenemos que hacer es llegar al objeto correspondiente del DOM.
+                        </p>
+                        <p>
+                            Todas las operaciones en el DOM comienzan con el objeto document. Este es el principal
+                            “punto de entrada” al DOM. Desde ahí podremos acceder a cualquier nodo.
+                        </p>
+                        <p>
+                            Los nodos DOM están anidados unos dentro de otros, un elemento puede contener muchos otros
+                            elementos dentro de él, como se muestra en el ejemplo a continuación.
+                        </p>
+                        <h4 class="heading" style="padding-top:1%">Ejemplo 1</h4>
+                        <p> En este ejemplo se podrá visualizar la estructura de árbol que presenta DOM. Encontramos un
+                            nodo padre de tipo nav, con id navbar. Dentro del nodo padre tenemos un nodo hijo que es un
+                            ul para contener un elemento hijo, y finalmente, dentro del nodo ul podemos encontrar un
+                            nodo hijo de tipo li para un elemento de lista.
+                        <div class="docs-code-block">
+                            <pre class="shadow-lg rounded"><code class="javascript hljs">&lt;div>
+    &lt;nav id="navbar">
+        &lt;ul>
+            &lt;li>Elemento de lista</li>
+        &lt;/ul>
+    &lt;/nav>
+&lt;/div>
+</code></pre>
+                        </div>
+                        <br>
+                        <p>Para más información da click en el siguiente botón.</p>
+                        <a type="button" class="btn btn-primary" href="aprendernodos.html">
+                            Vamos a aprender
+                        </a>
+                    </section>
+                    <!--//section-->
+                    <section class="docs-section" id="item-1-6">
+                        <h2 class="section-heading">Colecciones DOM</h2>
+
+                        <p>Un objeto de colección HTML es una colección de elementos HTML de forma similar a un arreglo
+                            y representa a los elementos de un documento. </p>
+                        <pre>
+    El índice comienza desde cero (0). Los elementos de la colección se ordenan en el orden en que aparecen en el código fuente.
+    Contiene un número que representa el índice del elemento que el usuario quiere devolver. El índice comienza desde 0.
+    Sintaxis: <code>HTMLCollection.item(index) </code>
+</pre>
+                        <p>El método getElementsByTagName() acepta un nombre de etiqueta y devuelve una colección HTML
+                            en vivo de elementos con el nombre de etiqueta coincidente en el orden en que aparecen en el
+                            documento.</p>
+                        </p>
+                        <pre>
+                            Sintaxis: <code>let elementos = document.getElementsByTagName(nombreEtiqueta);
+                            </code>
+</pre>
+                        </pre>
+                        <br>
+                        <p>Para más información da click en el siguiente botón.</p>
+                        <a type="button" class="btn btn-primary" href="aprendercolecciones.html">
+                            Vamos a aprender
+                        </a>
+                    </section>
+                    <!--//section-->
+                    <!--//section-->
+                    <section class="docs-section" id="item-1-7">
+                        <h2 class="section-heading">Lista de Nodos DOM</h2>
+
+                        <p>Un objeto NodeList es esencialmente una colección de nodos (elementos DOM) tomados del
+                            documento HTML. Es muy parecido a una matriz, pero no admite métodos de matriz, ya que son
+                            dos cosas completamente diferentes.</p>
+                        <pre>
+    El método querySelectorAll() devuelve una lista de nodos estática, mientras que la propiedad Node.childNodes devuelve una lista de nodos activa.
+</pre>
+                        <pre>
+                            <p>Cambiar una única propiedad CSS
+<p id="intro">El método NodeList values() devuelve un iterador que le permite recorrer todos los valores contenidos en el objeto NodeList. Los valores son objetos de nodo.
+
+    Sintaxis:
+    
+    ListaNodos.valores();
+    Parámetros: Este método no toma ningún parámetro.
+    
+    Valor devuelto: este método devuelve un iterador.
+</pre>
+                        </p>
+
+                        <br>
+                        <p>Para más información da click en el siguiente botón.</p>
+                        <a type="button" class="btn btn-primary" href="aprenderlistanodos.html">
+                            Vamos a aprender
+                        </a>
+                    </section>
+
+                    <!--//section-->
+                    </section>
+
+                    <!--//section-->
+
+                    <footer class="footer">
+                        <div class="container text-center py-5">
+                            <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+                            <small class="copyright">Template diseñado por <a class="theme-link"
+                                    href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley.</a></small>
+                            <ul class="social-list list-unstyled pt-4 mb-0">
+                                <li class="list-inline-item"><a href="https://www.facebook.com/"><i
+                                            class="fab fa-facebook-f fa-fw"></i></a></li>
+                                <li class="list-inline-item"><a href="https://www.instagram.com/"><i
+                                            class="fab fa-instagram fa-fw"></i></a></li>
+                            </ul>
+                            <!--//social-list-->
+                        </div>
+                    </footer>
+            </div>
+        </div>
+    </div>
+
+    <!--//docs-wrapper-->
+
+    <!-- Javascript -->
+    <script src="../assets/plugins/popper.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Page Specific JS -->
+    <script src="../assets/plugins/smoothscroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+    <script src="../assets/js/highlight-custom.js"></script>
+    <script src="../assets/plugins/simplelightbox/simple-lightbox.min.js"></script>
+    <script src="../assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script>
+    <script src="../assets/js/docs.js"></script>
+    <script src="../assets/plugins/codigo.js"></script>
+    <script src="../https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+    <!-- SCROOLL REVEAL SCRIPT -->
+    <script>
+        window.sr = ScrollReveal();
+
+        sr.reveal('#item-1-1', {
+            duration: 2000,
+            origin: 'bottom',
+            distance: '300px'
+        });
+
+        sr.reveal('#item-1-2', {
+            duration: 2000,
+            origin: 'bottom',
+            distance: '300px'
+        });
+        sr.reveal('#item-1-3', {
+            duration: 2000,
+            origin: 'bottom',
+            distance: '300px'
+        });
+
+        sr.reveal('#item-1-4', {
+            duration: 2000,
+            origin: 'bottom',
+            distance: '300px'
+        });
+        sr.reveal('#item-1-5', {
+            duration: 2000,
+            origin: 'bottom',
+            distance: '300px'
+        });
+
+        sr.reveal('#item-1-6', {
+            duration: 2000,
+            origin: 'bottom',
+            distance: '300px'
+        });
+        sr.reveal('#item-1-7', {
+            duration: 2000,
+            origin: 'bottom',
+            distance: '300px'
+        });
+
+        sr.reveal('.docs-header', {
+            duration: 2000,
+            origin: 'top',
+            distance: '300px'
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
